@@ -1,0 +1,164 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f6f7f9;
+  margin: 0;
+  color: #1d2330;
+}
+
+.container {
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e2e5ea;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #667085;
+  margin-top: 4px;
+}
+
+.right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef0f3;
+}
+
+.badge.overdue {
+  background: #fde2e1;
+  color: #b42318;
+}
+
+.badge.done {
+  background: #dcfae6;
+  color: #067647;
+}
+
+.badge.in_progress {
+  background: #e0eaff;
+  color: #3538cd;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.error {
+  color: #b42318;
+}
+
+.task-form {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #dbe3ed;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.task-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.task-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Task statistics */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e5ea;
+  border-radius: 10px;
+}
+
+.stat-card span {
+  color: #667085;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  font-size: 26px;
+  color: #087f8c;
+}
+
+/* Add task button */
+.container>button {
+  padding: 9px 16px;
+  background: #087f8c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .task {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
